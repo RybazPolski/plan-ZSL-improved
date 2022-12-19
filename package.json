@@ -1,0 +1,26 @@
+{
+  "name": "plan-zsl-improved",
+  "version": "1.0.0",
+  "description": "Ulepszona wersja dla planu ZSŁ z dodatkowymi funkcjami",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RybazPolski/plan-ZSL-improved.git"
+  },
+  "keywords": [
+    "ZSŁ"
+  ],
+  "author": "Julian Rybarczyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RybazPolski/plan-ZSL-improved/issues"
+  },
+  "homepage": "https://github.com/RybazPolski/plan-ZSL-improved#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^19.4.1"
+  }
+}
