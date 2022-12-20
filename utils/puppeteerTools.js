@@ -120,7 +120,7 @@ async function getAll(){
                 aliases["Wakat-HIS"] = "Gołuch J."
                 aliases["Wakat-IK_WF"] = "Kubiak I."
                 aliases["Wakat-IZ_MAT"] = "Zientera I."
-                aliases["Wakat-J.ANG_INF"] = "Jurczyk Maciuszonek"
+                aliases["Wakat-J.ANG_INF"] = "Jurczyk M."
                 aliases["Wakat-JK_FOTO"] = "Kurz J." 
                 aliases["Wakat-JM_ELEKTR"] = "Małecki J."
                 aliases["Wakat-JO"] = "Osiński J."
@@ -203,7 +203,7 @@ async function getAll(){
                             aliases["Wakat-HIS"] = "Gołuch J."
                             aliases["Wakat-IK_WF"] = "Kubiak I."
                             aliases["Wakat-IZ_MAT"] = "Zientera I."
-                            aliases["Wakat-J.ANG_INF"] = "Jurczyk Maciuszonek" 
+                            aliases["Wakat-J.ANG_INF"] = "Jurczyk M." 
                             aliases["Wakat-JK_FOTO"] = "Kurz J."
                             aliases["Wakat-JM_ELEKTR"] = "Małecki J."
                             aliases["Wakat-JO"] = "Osiński J."
@@ -238,7 +238,7 @@ async function getAll(){
     }
 }
 
-
+po
 module.exports = {
     getAll, getSchooltableURL
 }
