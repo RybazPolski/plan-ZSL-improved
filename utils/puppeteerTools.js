@@ -16,8 +16,8 @@ function replaceWakat(s) {
     aliases["Wakat-HIS"] = "Gołuch J."
     aliases["Wakat-IK_WF"] = "Kubiak I."
     aliases["Wakat-IZ_MAT"] = "Zientera I."
-    aliases["Wakat-J.ANG_INF"] = "Jurczyk Maciuszonek"
-    aliases["Wakat-JK_FOTO"] = "Jasiczak K." //FIXME: Do sprawdzenia, spytać 1FT
+    aliases["Wakat-J.ANG_INF"] = "Jurczyk M."
+    aliases["Wakat-JK_FOTO"] = "Kurz J."
     aliases["Wakat-JM_ELEKTR"] = "Małecki J."
     aliases["Wakat-JO"] = "Osiński J."
     aliases["Wakat-JW_ELEKTR"] = "Waraczewski J."
@@ -25,7 +25,7 @@ function replaceWakat(s) {
     aliases["Wakat-MKRA_EDB_WF"] = "Krawczyk M."
     aliases["Wakat-MK_JANG"] = "Kudlińska M."
     aliases["Wakat-MK_WF"] = "Konieczny M."
-    aliases["Wakat-REL"] = "Proch J." //FIXME: Podpytać księdza
+    aliases["Wakat-REL"] = "Gołuch J."
     aliases["Wakat-UC"] = "Cichocka U."
     aliases["Wakat-WDŻwR"] = "Wakat-WDŻwR"
     return aliases[s]?aliases[s]:s
@@ -121,7 +121,7 @@ async function getAll(){
                 aliases["Wakat-IK_WF"] = "Kubiak I."
                 aliases["Wakat-IZ_MAT"] = "Zientera I."
                 aliases["Wakat-J.ANG_INF"] = "Jurczyk Maciuszonek"
-                aliases["Wakat-JK_FOTO"] = "Jasiczak K." //FIXME: Do sprawdzenia, spytać 1FT
+                aliases["Wakat-JK_FOTO"] = "Kurz J." 
                 aliases["Wakat-JM_ELEKTR"] = "Małecki J."
                 aliases["Wakat-JO"] = "Osiński J."
                 aliases["Wakat-JW_ELEKTR"] = "Waraczewski J."
@@ -129,7 +129,7 @@ async function getAll(){
                 aliases["Wakat-MKRA_EDB_WF"] = "Krawczyk M."
                 aliases["Wakat-MK_JANG"] = "Kudlińska M."
                 aliases["Wakat-MK_WF"] = "Konieczny M."
-                aliases["Wakat-REL"] = "Proch J." //FIXME: Podpytać księdza
+                aliases["Wakat-REL"] = "Gołuch J."
                 aliases["Wakat-UC"] = "Cichocka U."
                 aliases["Wakat-WDŻwR"] = "Wakat-WDŻwR"
                 return aliases[s]?aliases[s]:s
@@ -204,7 +204,7 @@ async function getAll(){
                             aliases["Wakat-IK_WF"] = "Kubiak I."
                             aliases["Wakat-IZ_MAT"] = "Zientera I."
                             aliases["Wakat-J.ANG_INF"] = "Jurczyk Maciuszonek" 
-                            aliases["Wakat-JK_FOTO"] = "Jasiczak K." //FIXME: Do sprawdzenia, spytać 1FT
+                            aliases["Wakat-JK_FOTO"] = "Kurz J."
                             aliases["Wakat-JM_ELEKTR"] = "Małecki J."
                             aliases["Wakat-JO"] = "Osiński J."
                             aliases["Wakat-JW_ELEKTR"] = "Waraczewski J."
@@ -212,7 +212,7 @@ async function getAll(){
                             aliases["Wakat-MKRA_EDB_WF"] = "Krawczyk M."
                             aliases["Wakat-MK_JANG"] = "Kudlińska M."
                             aliases["Wakat-MK_WF"] = "Konieczny M."
-                            aliases["Wakat-REL"] = "Proch J." //FIXME: Podpytać księdza
+                            aliases["Wakat-REL"] = "Gołuch J."
                             aliases["Wakat-UC"] = "Cichocka U."
                             aliases["Wakat-WDŻwR"] = "Wakat-WDŻwR"
                             return aliases[s]?aliases[s]:s
