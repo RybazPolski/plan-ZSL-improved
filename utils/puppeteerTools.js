@@ -16,7 +16,7 @@ function replaceWakat(s) {
     aliases["Wakat-HIS"] = "Gołuch J."
     aliases["Wakat-IK_WF"] = "Kubiak I."
     aliases["Wakat-IZ_MAT"] = "Zientera I."
-    aliases["Wakat-J.ANG_INF"] = "Wakat-J.ANG_INF" //FIXME: spytać Olesa, uczy ZPI
+    aliases["Wakat-J.ANG_INF"] = "Jurczyk Maciuszonek"
     aliases["Wakat-JK_FOTO"] = "Jasiczak K." //FIXME: Do sprawdzenia, spytać 1FT
     aliases["Wakat-JM_ELEKTR"] = "Małecki J."
     aliases["Wakat-JO"] = "Osiński J."
@@ -120,7 +120,7 @@ async function getAll(){
                 aliases["Wakat-HIS"] = "Gołuch J."
                 aliases["Wakat-IK_WF"] = "Kubiak I."
                 aliases["Wakat-IZ_MAT"] = "Zientera I."
-                aliases["Wakat-J.ANG_INF"] = "Wakat-J.ANG_INF" //FIXME: spytać Olesa, uczy ZPI
+                aliases["Wakat-J.ANG_INF"] = "Jurczyk Maciuszonek"
                 aliases["Wakat-JK_FOTO"] = "Jasiczak K." //FIXME: Do sprawdzenia, spytać 1FT
                 aliases["Wakat-JM_ELEKTR"] = "Małecki J."
                 aliases["Wakat-JO"] = "Osiński J."
@@ -203,7 +203,7 @@ async function getAll(){
                             aliases["Wakat-HIS"] = "Gołuch J."
                             aliases["Wakat-IK_WF"] = "Kubiak I."
                             aliases["Wakat-IZ_MAT"] = "Zientera I."
-                            aliases["Wakat-J.ANG_INF"] = "Wakat-J.ANG_INF" //FIXME: spytać Olesa, uczy ZPI
+                            aliases["Wakat-J.ANG_INF"] = "Jurczyk Maciuszonek" 
                             aliases["Wakat-JK_FOTO"] = "Jasiczak K." //FIXME: Do sprawdzenia, spytać 1FT
                             aliases["Wakat-JM_ELEKTR"] = "Małecki J."
                             aliases["Wakat-JO"] = "Osiński J."
