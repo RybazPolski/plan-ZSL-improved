@@ -11,7 +11,7 @@ function replaceWakat(s) {
     aliases["Wakat-DK_ELEKTR"] = "Kopania D."
     aliases["Wakat-DS_INF"] = "Stolarski D."
     aliases["Wakat-EK"] = "Kawczyńska E."
-    aliases["Wakat-GG_FOTO"] = "Wakat-GG_FOTO"  //FIXME: może spotted powie
+    aliases["Wakat-GG_FOTO"] = "Darchiashvili G."  //FIXME: może spotted powie
     aliases["Wakat-GT_GEO"] = "Tomczak G." 
     aliases["Wakat-HIS"] = "Gołuch J."
     aliases["Wakat-IK_WF"] = "Kubiak I."
@@ -27,7 +27,7 @@ function replaceWakat(s) {
     aliases["Wakat-MK_WF"] = "Konieczny M."
     aliases["Wakat-REL"] = "Gołuch J."
     aliases["Wakat-UC"] = "Cichocka U."
-    aliases["Wakat-WDŻwR"] = "Wakat-WDŻwR"
+    aliases["Wakat-WDŻwR"] = "Kaczmarek D."
     return aliases[s]?aliases[s]:s
 }
 
@@ -115,7 +115,7 @@ async function getAll(){
                 aliases["Wakat-DK_ELEKTR"] = "Kopania D."
                 aliases["Wakat-DS_INF"] = "Stolarski D."
                 aliases["Wakat-EK"] = "Kawczyńska E."
-                aliases["Wakat-GG_FOTO"] = "Wakat-GG_FOTO"  //FIXME: może spotted powie
+                aliases["Wakat-GG_FOTO"] = "Darchiashvili G."  //FIXME: może spotted powie
                 aliases["Wakat-GT_GEO"] = "Tomczak G." 
                 aliases["Wakat-HIS"] = "Gołuch J."
                 aliases["Wakat-IK_WF"] = "Kubiak I."
@@ -131,7 +131,7 @@ async function getAll(){
                 aliases["Wakat-MK_WF"] = "Konieczny M."
                 aliases["Wakat-REL"] = "Gołuch J."
                 aliases["Wakat-UC"] = "Cichocka U."
-                aliases["Wakat-WDŻwR"] = "Wakat-WDŻwR"
+                aliases["Wakat-WDŻwR"] = "Kaczmarek D."
                 return aliases[s]?aliases[s]:s
             }
             s = replaceWakat(s)
@@ -198,7 +198,7 @@ async function getAll(){
                             aliases["Wakat-DK_ELEKTR"] = "Kopania D."
                             aliases["Wakat-DS_INF"] = "Stolarski D."
                             aliases["Wakat-EK"] = "Kawczyńska E."
-                            aliases["Wakat-GG_FOTO"] = "Wakat-GG_FOTO"  //FIXME: może spotted powie
+                            aliases["Wakat-GG_FOTO"] = "Darchiashvili G."  //FIXME: może spotted powie
                             aliases["Wakat-GT_GEO"] = "Tomczak G." 
                             aliases["Wakat-HIS"] = "Gołuch J."
                             aliases["Wakat-IK_WF"] = "Kubiak I."
@@ -214,7 +214,7 @@ async function getAll(){
                             aliases["Wakat-MK_WF"] = "Konieczny M."
                             aliases["Wakat-REL"] = "Gołuch J."
                             aliases["Wakat-UC"] = "Cichocka U."
-                            aliases["Wakat-WDŻwR"] = "Wakat-WDŻwR"
+                            aliases["Wakat-WDŻwR"] = "Kaczmarek D."
                             return aliases[s]?aliases[s]:s
                         }
                         s = replaceWakat(s)
