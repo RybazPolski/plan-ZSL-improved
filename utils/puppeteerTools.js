@@ -3,7 +3,7 @@ const puppeteer = require("puppeteer");
 function replaceWakat(s) {
     var aliases = {}
     aliases["Kubczak W."] = "Kubczak M."
-    aliases["Wakat k"] = "Wakat k" //FIXME: może spotted powie 2
+    aliases["Wakat k"] = "Krawczyk M." //FIXME: może spotted powie 2
     aliases["Wakat-AA_INF"] = "Adamek A."
     aliases["Wakat-AG_AUTO"] = "Grześkowiak A."
     aliases["Wakat-BB_POL"] = "Borowska B."
@@ -107,7 +107,7 @@ async function getAll(){
             function replaceWakat(s) {
                 var aliases = {}
                 aliases["Kubczak W."] = "Kubczak M."
-                aliases["Wakat k"] = "Wakat k" //FIXME: może spotted powie 2
+                aliases["Wakat k"] = "Krawczyk M." //FIXME: może spotted powie 2
                 aliases["Wakat-AA_INF"] = "Adamek A."
                 aliases["Wakat-AG_AUTO"] = "Grześkowiak A."
                 aliases["Wakat-BB_POL"] = "Borowska B."
@@ -190,7 +190,7 @@ async function getAll(){
                         function replaceWakat(s) {
                             var aliases = {}
                             aliases["Kubczak W."] = "Kubczak M."
-                            aliases["Wakat k"] = "Wakat k" //FIXME: może spotted powie 2
+                            aliases["Wakat k"] = "Krawczyk M." //FIXME: może spotted powie 2
                             aliases["Wakat-AA_INF"] = "Adamek A."
                             aliases["Wakat-AG_AUTO"] = "Grześkowiak A."
                             aliases["Wakat-BB_POL"] = "Borowska B."
