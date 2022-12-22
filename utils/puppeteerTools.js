@@ -238,7 +238,7 @@ async function getAll(){
     }
 }
 
-po
+
 module.exports = {
     getAll, getSchooltableURL
 }
