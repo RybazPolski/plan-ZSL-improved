@@ -166,6 +166,12 @@ async function getAll(){
         ))]
     }))
 
+    const subjects = (await page.$$eval("td.lekcja strong", elements => {
+        return [...new Set(elements.map(el=>{
+            return el.innerHTML
+        }).sort())]
+    }))
+
     const table = (await page.$$eval(`.plan_plan`, function (elements){
         return elements.map(el=>{
             let properties = {}
@@ -236,7 +242,8 @@ async function getAll(){
         plan: table,
         klasy: classes,
         sale: classrooms,
-        nauczyciele: teachers
+        nauczyciele: teachers,
+        przedmioty: subjects
     }
 }
 
