@@ -52,7 +52,7 @@ async function getSchooltableURL(){
     const browser = await puppeteer.launch({
         headless: true,
         defaultViewport: '',
-        args: ['--no-sandbox','--disable-setuid-sandbox']
+        args: ['--no-sandbox']
     });
     const page = await browser.newPage();
     await page.goto("https://zsl.poznan.pl/");
@@ -78,7 +78,7 @@ async function getAll(){
     const browser = await puppeteer.launch({
         headless: true,
         defaultViewport: '',
-        args: ['--no-sandbox','--disable-setuid-sandbox']
+        args: ['--no-sandbox']
     });
     const page = await browser.newPage();
     await page.goto(url)
