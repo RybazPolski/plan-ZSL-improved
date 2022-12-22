@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <script src="./scripts/jquery-3.6.1.min.js"></script>
+    <script src="./scripts/apiIntegration.js"></script>
+    <style>
+        table, td, tr{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+    <select id="kategoria" onchange="planZSLapi.wyswietlOpcje($('#kategoria').val(),'#opcja')">
+        <option value="klasy">Klasa</option>
+        <option value="sale">Sala</option>
+        <option value="nauczyciele">Nauczyciel</option>
+        <option value="przedmioty">Przedmiot</option>
+    </select>
+    <select id="opcja" onchange="planZSLapi.wyswietlPlan($('#kategoria'),$('#opcja'),'.r','.c')"></select>
+
+    <table>
+        <tr class="r1"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r2"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r3"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r4"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r5"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r6"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r7"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r8"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r9"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r10"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r11"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r12"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r13"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r14"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r15"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+    </table>
+
+    <!-- <table>
+        <tr class="r1"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
+        <tr class="r2"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
+        <tr class="r3"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
+        <tr class="r4"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
+        <tr class="r5"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
+    </table> -->
+
+
+
+
+
+
+
+    <script>
+        // ta funkcja będzie czekała z wykonaniem kodu w elsie aż mój skrypt nie określi czy połączono czy nie - inaczej występowały problemy
+        function waitForLoaded() {
+            if(planZSLapi.polaczono === undefined) {
+                window.setTimeout(waitForLoaded, 100);
+            } else {
+                // tu wrzuć cały kod wykorzystujący skrypt planZSLapi. Zasadniczo powinny się wyświetlać też informacje o dostępnych funckjach i takich tam, jak i ich dokumentacja ale u mnie vscode miał focha, zobaczy się jak u Ciebie 
+                if(planZSLapi.polaczono){
+                    planZSLapi.wyswietlOpcje($('#kategoria').val(),'#opcja')
+                    planZSLapi.wyswietlPlan($('#kategoria'),$('#opcja'),'.r','.c')
+                }else{
+                    console.error(planZSLapi.blad)
+                }
+            }
+        }
+        waitForLoaded();
+
+    </script>
+
+</body>
+</html>
