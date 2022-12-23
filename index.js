@@ -15,7 +15,7 @@ const corsOptions ={
 }
 app.use(cors(corsOptions));
 
-app.get('/plan', async (req, res)=>{
+app.get('/getAll', async (req, res)=>{
     res.status(200).send(
         await puppeteerTools.getAll()
     )
