@@ -31,6 +31,12 @@ function replaceWakat(s) {
     return aliases[s]?aliases[s]:s
 }
 
+function disambiguateSubject(s) {
+    var aliases = {}
+    // aliases["bazy danych"] = "projektowanie i administrowanie bazami danych"
+    return aliases[s]?aliases[s]:s
+}
+
 function classroomSort( a, b ) {
     if(a[0]=='0'&&(a.split(" ")[0].length)==2){a='00'+a}else{
         if(a[0]=='0'||(a.split(" ")[0].length)==2){a='0'+a}
@@ -168,7 +174,12 @@ async function getAll(){
 
     const subjects = (await page.$$eval("td.lekcja strong", elements => {
         return [...new Set(elements.map(el=>{
-            return el.innerHTML
+            function disambiguateSubject(s) {
+                var aliases = {}
+                // aliases["bazy danych"] = "projektowanie i administrowanie bazami danych"
+                return aliases[s]?aliases[s]:s
+            }
+            return disambiguateSubject(el.innerHTML)
         }).sort())]
     }))
 
@@ -186,7 +197,14 @@ async function getAll(){
                         let s
                         props.day=day
                         props.unit=unit
-                        props.subject = lesson.querySelectorAll("strong")[i].innerHTML
+
+                        function disambiguateSubject(s) {
+                            var aliases = {}
+                            // aliases["bazy danych"] = "projektowanie i administrowanie bazami danych"
+                            return aliases[s]?aliases[s]:s
+                        }
+
+                        props.subject = disambiguateSubject(lesson.querySelectorAll("strong")[i].innerHTML)
 
                         s = lesson.querySelectorAll('small')[i].innerHTML
                         props.classroom = s.slice(s.indexOf("(")+1, s.indexOf(")"))
