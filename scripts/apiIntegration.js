@@ -40,22 +40,22 @@ planZSLapi.wyswietlOpcje = (kategoria,selektor)=>{
     $(selektor).html('')
     switch(kategoria){
         case "klasy":
-            for(el of planZSLapi.klasy){
+            for(let el of planZSLapi.klasy){
                 $(selektor).append(`<option value="${el.id}">${el.class}</option>`)
             }
             break;
         case "sale":
-            for(el of planZSLapi.sale){
+            for(let el of planZSLapi.sale){
                 $(selektor).append(`<option value="${el}">${el}</option>`)
             }
             break;
         case "nauczyciele":
-            for(el of planZSLapi.nauczyciele){
+            for(let el of planZSLapi.nauczyciele){
                 $(selektor).append(`<option value="${el}">${el}</option>`)
             }
             break;
         case "przedmioty":
-            for(el of planZSLapi.przedmioty){
+            for(let el of planZSLapi.przedmioty){
                 $(selektor).append(`<option value="${el}">${el}</option>`)
             }
             break;
@@ -78,7 +78,7 @@ planZSLapi.filtrujPlan = (kategoria,opcja)=>{
     let data = new Array();
     switch(kategoria){
         case "klasy":
-            for(el of planZSLapi.plan){
+            for(let el of planZSLapi.plan){
                 if(el.classId==opcja){
                     for(lesson of el.lessons){
                         data.push(lesson)
@@ -87,7 +87,7 @@ planZSLapi.filtrujPlan = (kategoria,opcja)=>{
             }
             break;
         case "sale":
-            for(el of planZSLapi.plan){
+            for(let el of planZSLapi.plan){
                 for(lesson of el.lessons){
                     if(lesson.classroom==opcja){
                         data.push(lesson)
@@ -96,7 +96,7 @@ planZSLapi.filtrujPlan = (kategoria,opcja)=>{
             }
             break;
         case "nauczyciele":           
-            for(el of planZSLapi.plan){
+            for(let el of planZSLapi.plan){
                 for(lesson of el.lessons){
                     if(lesson.teacher==opcja){
                         data.push(lesson)
@@ -105,7 +105,7 @@ planZSLapi.filtrujPlan = (kategoria,opcja)=>{
             }
             break;
         case "przedmioty":
-            for(el of planZSLapi.plan){
+            for(let el of planZSLapi.plan){
                 for(lesson of el.lessons){
                     if(lesson.subject==opcja){
                         data.push(lesson)
@@ -126,9 +126,15 @@ planZSLapi.filtrujPlan = (kategoria,opcja)=>{
  * @param {boolean} zamien Domyślnie false. Jeżeli ustawione na true, dni tygodnia będą wyświetlać się w rzędach, a numery jednostek lekcyjnych w kolumnach. Zaleca się używać tych samych typów selektorów, np. klas, zarówno w rzędach jak i kolumnach
 */
 planZSLapi.wyswietlPlan = function (selektorKategoria,selektorOpcja,prefiksRzad,prefiksKolumna,zamien=false){
+    
+    if(!planZSLapi.polaczono){
+        console.error(`Nie można połączyć się z API!`)
+        return
+    }
+    
+    
     let data = this.filtrujPlan($(selektorKategoria).val(),$(selektorOpcja).val())
     if(zamien){
-        [prefiksKolumna,prefiksRzad]=[prefiksRzad,prefiksKolumna]
         for(i=1;i<=5;i++){
             for(j=1;j<=15;j++){
                 $(prefiksRzad+i+" "+prefiksKolumna+j).html('')
@@ -142,11 +148,14 @@ planZSLapi.wyswietlPlan = function (selektorKategoria,selektorOpcja,prefiksRzad,
         }
     }
     
-    for(el of data){
+    for(let el of data){
 
         //TODO: Zmiana poniższej struktury [Pixoni jeśli to czytasz - poniższą linijkę śmiało edytuj ^^]
         let lekcja = `<div>${el.subject}<br>${el.group}<br>${el.teacher}<br>${el.classroom}</div>`
         
+        if(zamien){
+            [el.unit,el.day]=[el.day,el.unit]
+        }
         if(!$(prefiksRzad+el.unit+" "+prefiksKolumna+el.day).html().includes(lekcja)){
             if($(prefiksRzad+el.unit+" "+prefiksKolumna+el.day).html()==''){
                 $(prefiksRzad+el.unit+" "+prefiksKolumna+el.day).append(lekcja)

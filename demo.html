@@ -8,7 +8,7 @@
     <script src="./scripts/jquery-3.6.1.min.js"></script>
     <script src="./scripts/apiIntegration.js"></script>
     <style>
-        table, td, tr{
+        table, td, tr, th{
             border: 2px solid black;
             border-collapse: collapse;
         }
@@ -16,38 +16,41 @@
 </head>
 <body>
 
-    <select id="kategoria" onchange="planZSLapi.wyswietlOpcje($('#kategoria').val(),'#opcja')">
+    <select id="kategoria" onchange="planZSLapi.wyswietlOpcje($('#kategoria').val(),'#opcja');planZSLapi.wyswietlPlan($('#kategoria'),$('#opcja'),'.r','.c',1)">
         <option value="klasy">Klasa</option>
         <option value="sale">Sala</option>
         <option value="nauczyciele">Nauczyciel</option>
         <option value="przedmioty">Przedmiot</option>
     </select>
-    <select id="opcja" onchange="planZSLapi.wyswietlPlan($('#kategoria'),$('#opcja'),'.r','.c')"></select>
+    <select id="opcja" onchange="planZSLapi.wyswietlPlan($('#kategoria'),$('#opcja'),'.r','.c',false)"></select>
 
     <table>
-        <tr class="r1"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r2"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r3"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r4"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r5"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r6"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r7"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r8"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r9"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r10"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r11"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r12"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r13"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r14"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
-        <tr class="r15"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+         <tr class="r0"><th class="c0"></th><th class="c1">Poniedziałek</th><th class="c2">Wtorek</th><th class="c3">Środa</th><th class="c4">Czwartek</th><th class="c5">Piątek</th></tr>
+         <tr class="r1"><td class="c0">Lekcja 1<br>07:20-08:05</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+         <tr class="r2"><td class="c0">Lekcja 2<br>08:10-08:55</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+         <tr class="r3"><td class="c0">Lekcja 3<br>09:05-09:50</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+         <tr class="r4"><td class="c0">Lekcja 4<br>10:00-10:45</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+         <tr class="r5"><td class="c0">Lekcja 5<br>11:00-11:45</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+         <tr class="r6"><td class="c0">Lekcja 6<br>11:55-12:40</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+         <tr class="r7"><td class="c0">Lekcja 7<br>13:00-13:45</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+         <tr class="r8"><td class="c0">Lekcja 8<br>14:05-14:50</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+         <tr class="r9"><td class="c0">Lekcja 9<br>15:00-15:45</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r10"><td class="c0">Lekcja 10<br>15:55-16:40</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r11"><td class="c0">Lekcja 11<br>16:45-17:30</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r12"><td class="c0">Lekcja 12<br>17:35-18:20</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r13"><td class="c0">Lekcja 13<br>18:25-19:10</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r14"><td class="c0">Lekcja 14<br>19:15-20:00</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
+        <tr class="r15"><td class="c0">Lekcja 15<br>20:05-20:50</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td></tr>
     </table>
 
+    <!-- Tabela dla obróconego układu -->
     <!-- <table>
-        <tr class="r1"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
-        <tr class="r2"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
-        <tr class="r3"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
-        <tr class="r4"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
-        <tr class="r5"><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
+        <tr class="r0"><th class="c0"></th><th class="c1">Lekcja 1<br>07:20-08:05</th><th class="c2">Lekcja 2<br>08:10-08:55</th><th class="c3">Lekcja 3<br>09:05-09:50</th><th class="c4">Lekcja 4<br>10:00-10:45</th><th class="c5">Lekcja 5<br>11:00-11:45</th><th class="c6">Lekcja 6<br>11:55-12:40</th><th class="c7">Lekcja 7<br>13:00-13:45</th><th class="c8">Lekcja 8<br>14:05-14:50</th><th class="c9">Lekcja 9<br>15:00-15:45</th><th class="c10">Lekcja 10<br>15:55-16:40</th><th class="c11">Lekcja 11<br>16:45-17:30</th><th class="c12">Lekcja 12<br>17:35-18:20</th><th class="c13">Lekcja 13<br>18:25-19:10</th><th class="c14">Lekcja 14<br>19:15-20:00</th><th class="c15">Lekcja 15<br>20:05-20:50</th></tr>
+        <tr class="r1"><td class="c0">Poniedziałek</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
+        <tr class="r2"><td class="c0">Wtorek</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
+        <tr class="r3"><td class="c0">Środa</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
+        <tr class="r4"><td class="c0">Czwartek</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
+        <tr class="r5"><td class="c0">Piątek</td><td class="c1"></td><td class="c2"></td><td class="c3"></td><td class="c4"></td><td class="c5"></td><td class="c6"></td><td class="c7"></td><td class="c8"></td><td class="c9"></td><td class="c10"></td><td class="c11"></td><td class="c12"></td><td class="c13"></td><td class="c14"></td><td class="c15"></td></tr>
     </table> -->
 
 
@@ -56,25 +59,7 @@
 
 
 
-    <script>
-        // ta funkcja będzie czekała z wykonaniem kodu w elsie aż mój skrypt nie określi czy połączono czy nie - inaczej występowały problemy
-        function waitForLoaded() {
-            if(planZSLapi.polaczono === undefined) {
-                window.setTimeout(waitForLoaded, 100);
-            } else {
-                // tu wrzuć cały kod wykorzystujący skrypt planZSLapi. Zasadniczo powinny się wyświetlać też informacje o dostępnych funckjach i takich tam, jak i ich dokumentacja ale u mnie vscode miał focha, zobaczy się jak u Ciebie 
-                if(planZSLapi.polaczono){
-                    planZSLapi.wyswietlOpcje($('#kategoria').val(),'#opcja')
-                    planZSLapi.wyswietlPlan($('#kategoria'),$('#opcja'),'.r','.c')
-                    //jeśli chcesz podmienić szablon lekcji wyświetlanych w komórkach tabeli, śmiało looknij do scripts/apiIntegration.js na linijkę 147
-                }else{
-                    console.error(planZSLapi.blad)
-                }
-            }
-        }
-        waitForLoaded();
-
-    </script>
+    <script src="./scripts/demo_main.js" defer></script>
 
 </body>
 </html>
