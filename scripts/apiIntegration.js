@@ -7,7 +7,7 @@ window.onload = function() {
     } else {
 
         $.ajax({
-            url:"https://plan-ZSL-api.herokuapp.com/getAll",
+            url:"https://plan-ZSL-improved.herokuapp.com/getAll",
             type:"GET",
             success: (data)=>{
                 $.extend(planZSLapi,data)
