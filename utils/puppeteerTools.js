@@ -71,7 +71,11 @@ async function getSchooltableURL(){
     }
     
     let url = (await page.$$eval(".dropdown-item", elements => {
-        for(el of elements){if(el.innerHTML.includes("Plan lekcji")){return el.href}}}
+        for(el of elements){if(el.innerHTML.includes("Plan lekcji")){
+            let properties = {}
+            properties.url = el.href
+            properties.date = el.innerHTML.slice(el.innerHTML.length-11)
+        }}}
     ))
         
     browser.close()
@@ -81,7 +85,7 @@ async function getSchooltableURL(){
 }
  
 async function getAll(){
-    const url = await getSchooltableURL()
+    const tableLink = await getSchooltableURL()
     const browser = await puppeteer.launch({
         headless: true,
         defaultViewport: '',
@@ -89,7 +93,7 @@ async function getAll(){
         ignoreDefaultArgs: ['--disable-extensions']
     });
     const page = await browser.newPage();
-    await page.goto(url)
+    await page.goto(tableLink.url)
     
     try{
         await page.waitForSelector("#plan_kontener")
@@ -102,7 +106,7 @@ async function getAll(){
         return elements.map(el=>{
             let properties = {}
             properties.id = el.href.slice(-6)
-            properties.class = el.innerHTML.slice(2)
+            properties.class = el.innerHTML.slice(el.innerHTML.length-11)
             return properties
         })
     }))
@@ -257,6 +261,7 @@ async function getAll(){
 
     browser.close()
     return {
+        version: tableLink.date,
         plan: table,
         klasy: classes,
         sale: classrooms,
