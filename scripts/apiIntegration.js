@@ -22,6 +22,10 @@ window.onload = function() {
     }
 }
 
+planZSLapi.wyswietlWersjePlanu = (divI)=>{
+    $(selektor).html()
+}
+
 /**
  * @description Wstawia opcje wyświetlania planu w formie <option value="wartość">Nazwa</option> do elementu podanym selektorze.   
  * @param {('klasy'|'sale'|'nauczyciele'|'przedmioty')} kategoria wskazuje spośród której kategorii wyświetlić opcje - Klas, Sal, Nauczycieli czy Przedmiotów.

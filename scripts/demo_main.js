@@ -8,6 +8,7 @@ function waitForLoaded() {
             planZSLapi.wyswietlOpcje($('#kategoria').val(),'#opcja')
             planZSLapi.wyswietlPlan($('#kategoria'),$('#opcja'),'.r','.c',false)
             //jeśli chcesz podmienić szablon lekcji wyświetlanych w komórkach tabeli, śmiało looknij do scripts/apiIntegration.js na linijkę 147
+            
         }else{
             console.error(planZSLapi.blad)
         }
