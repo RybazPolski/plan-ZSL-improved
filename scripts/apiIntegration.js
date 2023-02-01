@@ -7,8 +7,8 @@ window.onload = function() {
     } else {
 
         $.ajax({
-            url:"https://plan-ZSL-improved.herokuapp.com/getAll",
-            // url:"http://localhost:8080/getAll",
+            // url:"https://plan-ZSL-improved.herokuapp.com/getAll",
+            url:"http://localhost:8080/getAll",
             type:"GET",
             success: (data)=>{
                 $.extend(planZSLapi,data)
@@ -22,7 +22,7 @@ window.onload = function() {
     }
 }
 
-planZSLapi.wyswietlWersjePlanu = (divI)=>{
+planZSLapi.wyswietlWersjePlanu = (divId)=>{
     $(selektor).html()
 }
 
