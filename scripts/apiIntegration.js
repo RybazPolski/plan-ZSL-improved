@@ -8,7 +8,7 @@ window.onload = function() {
 
         $.ajax({
             // url:"https://plan-ZSL-improved.herokuapp.com/getAll",
-            url:"http://localhost:8080/getAll",
+            url:"http://localhost:10000/getAll",
             type:"GET",
             success: (data)=>{
                 $.extend(planZSLapi,data)
